@@ -28,7 +28,7 @@
 
 html {
   @extend %body;
-  background: var(--color-dark-50);
+  background: var(--theme-bg);
   -webkit-font-smoothing: antialiased;
   opacity: 0;
 
@@ -60,12 +60,12 @@ body {
 
 ::selection {
   background: var(--color-dark-500);
-  color: var(--color-base-100);
+  color: var(--color-base-800);
 }
 
 ::-moz-selection {
-  background: var(--color-dark-500);
-  color: var(--color-base-100);
+  background: var(--color-dark-50);
+  color: var(--color-base-800);
 }
 
 img {
