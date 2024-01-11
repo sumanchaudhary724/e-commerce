@@ -1,89 +1,28 @@
-@import '../../_css/queries.scss';
+@use '../../_css/queries.scss' as *;
 
-.hero {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-
-  @include small-break {
-    margin: 0;
-  }
-}
-
-.heroWrapper {
-  background-color: var(--color-dark-50);
-  width: 100%;
-  max-width: 1560px;
-  max-height: 884px;
-  display: flex;
-  align-items: center;
-
-  background-size: cover;
-  background-position: revert;
-  background-repeat: no-repeat;
-
-  @include small-break {
-    background-size: cover;
-    background-position: center;
-  }
-}
-
-.heroTextBox {
+.container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 15% var(--gutter-h);
-  width: 100%;
+  gap: 50px;
+}
 
-  @include mid-break {
-    padding: 10% 30px;
-  }
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  @include small-break {
-    padding: 50px 30px;
-  }
-
-  h2 {
-    font-size: 70px;
-    margin: 32px 0;
-
-    @include mid-break {
-      font-size: 48px;
-      margin: 24px 0;
-      white-space: wrap;
-    }
-
-    @include small-break {
-      width: 70%;
-      font-size: 36px;
-      margin: 8px 0;
-    }
-  }
-
-  p {
-    font-size: 30px;
-
-    @include mid-break {
-      font-size: 24px;
-    }
-
-    @include small-break {
-      font-size: 18px;
-    }
+  h3 {
+    font-weight: 400;
   }
 }
 
-.links {
-  list-style: none;
-  margin: 0;
+.list {
+  display: grid;
+  gap: 30px;
   padding: 0;
-  display: flex;
-  padding-top: 50px;
-  flex-wrap: wrap;
-  margin: calc(var(--base) * -0.5);
+  grid-template-columns: repeat(3, 1fr);
 
-  & > * {
-    margin: calc(var(--base) / 2);
+  @include small-break {
+    grid-template-columns: 1fr;
   }
 }
